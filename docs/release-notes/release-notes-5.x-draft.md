@@ -40,7 +40,7 @@ v5.x Release notes
 
   - Updates related to nonces and blinds (**MAJOR** [#767](https://github.com/handshake-org/hsd/pull/767))
     - Multisig wallets will compute nonces based on the LOWEST public key in the group.
-    This makes multiparty bidding and revealing more deteministic. Older versions would
+    This makes multiparty bidding and revealing more deterministic. Older versions would
     always use the wallet's OWN public key. To preserve compatability with older software:
       - RPC method `importnonce` now returns an array of blinds instead of a single blind.
       - HTTP endpoint `/wallet/:id/nonce/:name`'s response replaces 2 string fields (`nonce`, `blind`) with arrays of the same type (`nonces`, `blinds`)
